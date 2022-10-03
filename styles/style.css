@@ -1,0 +1,133 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f6f8fa;
+  padding: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+.sub-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .sub-title {
+    margin-bottom: 20px;
+  }
+}
+
+header {
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+header .main-title {
+  width: 300px;
+}
+header .main-title a {
+  display: block;
+}
+
+.mainvisual {
+  margin-bottom: 40px;
+}
+
+.index {
+  margin-bottom: 40px;
+}
+.index__list {
+  border: solid 1px black;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.index__list li {
+  padding-bottom: 10px;
+}
+.index__list li:last-child {
+  padding-bottom: 0;
+}
+
+.photos {
+  margin-bottom: 40px;
+}
+.photos__inner {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: space-between;
+}
+.photos__content {
+  max-width: 390px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .photos__content {
+    max-width: 100%;
+  }
+}
+
+.detail {
+  margin-bottom: 40px;
+}
+.detail__contents {
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .detail__contents {
+    flex-direction: column;
+  }
+}
+.detail__list {
+  border-right: solid 1px black;
+  padding-right: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .detail__list {
+    border-right: none;
+    border-bottom: solid 1px black;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+}
+.detail__list dl {
+  padding-bottom: 10px;
+}
+.detail__list dl dt {
+  font-weight: 800;
+}
+.detail__item {
+  padding-left: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .detail__item {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+.detail__item p {
+  margin-bottom: 20px;
+}
+.detail__item a {
+  color: black;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+}/*# sourceMappingURL=style.css.map */

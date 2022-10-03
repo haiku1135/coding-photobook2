@@ -1,0 +1,158 @@
+// コーディング仕様
+
+// コンテンツ幅
+// メインビジュアルが1000px、中のコンテンツが800pxです。
+
+// INDEX
+// グレー背景にして枠線を引きます。
+
+// 画像
+// 2列の横並びに配置します。
+
+// DETAIL
+// 出版情報とテキストを横並びに配置します。
+// 間に罫線を引きます。
+
+// レスポンシブ
+// ブレークポイントは1024pxです。
+// 画像エリアの4枚の画像は1列で縦に並べます。
+// DETAILは出版情報とテキストを縦に並べて、間に罫線を引きます。
+
+//variables
+$cBgGray: #f6f8fa;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: $cBgGray;
+  padding: 40px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+.sub-title {
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 20px;
+  }
+}
+
+header {
+  padding-top: 60px;
+  margin-bottom: 20px;
+  & .main-title {
+    width: 300px;
+
+    & a {
+      display: block;
+    }
+  }
+}
+
+.mainvisual {
+  margin-bottom: 40px;
+}
+
+.index {
+  margin-bottom: 40px;
+
+  &__list {
+    border: solid 1px black;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & li {
+      padding-bottom: 10px;
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.photos {
+  margin-bottom: 40px;
+  &__inner {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 390px;
+    margin-top: 20px;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.detail {
+  margin-bottom: 40px;
+
+  &__contents {
+    display: flex;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    border-right: solid 1px black;
+    padding-right: 40px;
+
+    @media screen and (max-width: 1024px) {
+      border-right: none;
+      border-bottom: solid 1px black;
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
+    & dl {
+      padding-bottom: 10px;
+
+      & dt {
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__item {
+    padding-left: 40px;
+    @media screen and (max-width: 1024px) {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+    & p {
+      margin-bottom: 20px;
+    }
+
+    & a {
+      color: black;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
